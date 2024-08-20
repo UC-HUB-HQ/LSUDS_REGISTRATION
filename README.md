@@ -23,8 +23,8 @@ This project was built using
     git clone [url]
     ```
 2. Open the project on your preferred IDE (preferably VSCODE)
-3. Run npm install, to install the necessary packeages organized in the node_modules folder.
-4. Run npm run dev, to start the server
+3. Run ```npm install``` to install the necessary packeages organized in the node_modules folder.
+4. Run ```npm run dev``` to start the server
 5. copy the local server url and paste in your browser
 6. Adios
 
