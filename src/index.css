@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.flexAlignCenter{
+    @apply flex items-center
+}
+
+/* FORM PROGRESS SECTION */
+
+.progressLineActive{
+    @apply w-full bg-softBlue h-1 col-span-1 tabView
+}
+
+.progressLineDormant{
+    @apply w-full bg-grayishBlue h-1 col-span-1 tabView
+}
+
+.progressLabelActive{
+    @apply text-nowrap px-3 font-bold mobile:hidden
+}
+
+.progressLabelDormant{
+    @apply text-nowrap px-3 font-bold text-grayishBlue mobile:hidden
+}
+
+.progressNumberingActive{
+    @apply bg-softBlue rounded-full h-7 w-7 text-center text-white
+}
+
+.progressNumberingDormant{
+    @apply bg-grayishBlue rounded-full h-7 w-7 text-center text-white
+}
+
+
+
+.form{
+    @apply shadow-lg w-[70%] mx-auto px-[6em] py-[4em] tab:px-[4em] mobile:w-full mobile:pt-0 mobile:shadow-none mobile:py-0
+} 
+
+.inputsContainer{
+    @apply flex gap-[4em] tab:flex-col tab:gap-0
+}
+
+.inputBox{
+    @apply flex flex-col w-full mb-8 tab:mb-10
+}
+
+.inputField{
+    @apply border-2 border-grayishBlue rounded-md h-[50px] outline-none pl-3 text-[#252b46]
+}
+
+.inputLabel{
+    @apply mb-3 text-[#252b46] font-medium
+}
+
+textarea{
+    @apply border-2 border-grayishBlue rounded-md h-[150px] outline-none pl-3 text-[#252b46] mobile:h-[100px]
+}
+
+
+.tabView{
+    @apply tab:hidden
+}
