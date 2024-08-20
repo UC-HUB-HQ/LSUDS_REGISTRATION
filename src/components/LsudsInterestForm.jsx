@@ -35,7 +35,7 @@ const LsudsInterestForm = ({prevStep}) => {
             
             <div className="flex justify-between items-center mt-8">
                 <button className=" bg-softRed text-white px-6 py-2 rounded-md" type="button" onClick={prevStep}>Prev</button>
-                <input className=" bg-softBlue text-white px-6 py-2 rounded-md"  type="submit" value="Submit" />
+                <input className=" bg-softBlue text-white px-6 py-2 rounded-md cursor-pointer"  type="submit" value="Submit" />
             </div>
         </>
     )
