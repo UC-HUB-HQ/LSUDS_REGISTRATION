@@ -30,7 +30,7 @@ const LsudsInterestForm = ({prevStep}) => {
             </div>
 
             <div className=" text-grayishBlue">
-                <p><b>Note:</b> Online interviews are only advised in extreme scenrios where the interviewee is sure they cannot make it to the physical venue.</p>
+                <p><b className="text-darkBlue">Note:</b> Online interviews are only advised in extreme scenrios where the interviewee is sure they cannot make it to the physical venue.</p>
             </div>
             
             <div className="flex justify-between items-center mt-8">
