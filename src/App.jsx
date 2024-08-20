@@ -1,8 +1,12 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { LsudsInterestForm, ApplicantInfoForm, FormProgress } from "./components"
 function App() {
 
   const [isStepOne, setIsStepOne] = useState(true)
+
+  useEffect( () => {
+    window.scrollTo(0,0);
+  }, [isStepOne])
 
   const nextFormStep = () => {
     setIsStepOne(!isStepOne)
