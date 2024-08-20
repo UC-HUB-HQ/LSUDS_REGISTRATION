@@ -36,7 +36,7 @@
 
 
 .form{
-    @apply shadow-lg w-[70%] mx-auto px-[6em] py-[4em] tab:px-[4em] mobile:w-full mobile:pt-0 mobile:shadow-none mobile:py-0
+    @apply shadow-lg w-[70%] mx-auto px-[6em] py-[4em] tab:px-[4em] mobile:w-full mobile:pt-0 mobile:shadow-none mobile:py-0 mobile:px-[2em]
 } 
 
 .inputsContainer{
@@ -48,7 +48,7 @@
 }
 
 .inputField{
-    @apply border-2 border-grayishBlue rounded-md h-[50px] outline-none pl-3 text-[#252b46]
+    @apply border border-grayishBlue rounded-md h-[50px] outline-none pl-3 text-[#252b46]
 }
 
 .inputLabel{
@@ -56,9 +56,8 @@
 }
 
 textarea{
-    @apply border-2 border-grayishBlue rounded-md h-[150px] outline-none pl-3 text-[#252b46] mobile:h-[100px]
+    @apply border border-grayishBlue rounded-md h-[150px] outline-none pl-3 text-[#252b46] mobile:h-[100px]
 }
-
 
 .tabView{
     @apply tab:hidden
