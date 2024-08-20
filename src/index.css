@@ -26,11 +26,11 @@
 }
 
 .progressNumberingActive{
-    @apply bg-softBlue rounded-full h-7 w-7 text-center text-white
+    @apply bg-softBlue rounded-full h-7 w-7 flex justify-center items-center text-white
 }
 
 .progressNumberingDormant{
-    @apply bg-grayishBlue rounded-full h-7 w-7 text-center text-white
+    @apply bg-grayishBlue rounded-full h-7 w-7 flex justify-center items-center text-white
 }
 
 
