@@ -17,9 +17,9 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen py-[4em] mobile:py-[3em]">
+    <div className="min-h-screen py-[4em] mobile:py-[3em] font-body">
       <section className="flex justify-center items-center mb-[4em]">
-        <h1 className="text-3xl font-bold text-grayishBlue">LSUDS REGISTRATION</h1>
+        <h1 className="text-3xl font-bold text-darkBlue mobile:text-xl">LSUDS REGISTRATION</h1>
       </section>
       <section>
         <FormProgress stepOne={isStepOne} />

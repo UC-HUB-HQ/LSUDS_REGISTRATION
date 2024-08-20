@@ -23,7 +23,14 @@ const LsudsInterestForm = ({prevStep}) => {
 
             <div className="inputBox">
                 <label className="inputLabel" htmlFor="question5">5. If you make it to the next stage, how do you want to be interviewed: Physical or Virtual?</label>
-                <textarea name="entry.2061764711" id="question5"></textarea>
+                <select className="inputField" name="entry.2061764711" id="question5">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div className=" text-grayishBlue">
+                <p><b>Note:</b> Online interviews are only advised in extreme scenrios where the interviewee is sure they cannot make it to the physical venue.</p>
             </div>
             
             <div className="flex justify-between items-center mt-8">
