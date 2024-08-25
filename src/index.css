@@ -1,44 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap'); */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap');
 
 
 .flexAlignCenter{
     @apply flex items-center
 }
 
-/* FORM PROGRESS SECTION */
-
-.progressLineActive{
-    @apply w-full bg-softBlue h-1 col-span-1 tabView
+.customShadow{
+    box-shadow: 0px 0px 30px rgb(213, 211, 211);
 }
 
-.progressLineDormant{
-    @apply w-full bg-grayishBlue h-1 col-span-1 tabView
-}
+/* MAIN ELEMENT STYLE */
 
-.progressLabelActive{
-    @apply text-nowrap px-3 font-bold mobile:hidden
-}
-
-.progressLabelDormant{
-    @apply text-nowrap px-3 font-bold text-grayishBlue mobile:hidden
-}
-
-.progressNumberingActive{
-    @apply bg-softBlue rounded-full h-7 w-7 flex justify-center items-center text-white
-}
-
-.progressNumberingDormant{
-    @apply bg-grayishBlue rounded-full h-7 w-7 flex justify-center items-center text-white
-}
-
-
-
-.form{
-    @apply shadow-lg w-[70%] mx-auto px-[6em] py-[4em] tab:px-[4em] mobile:w-full mobile:pt-0 mobile:shadow-none mobile:py-0 mobile:px-[2em]
+.main_content{
+    @apply w-[60%] mx-auto rounded-lg
 } 
+
+
+/* FORM_PROGRESS COMPONENT */
+
+.progressLabelContainer{
+    @apply flex flex-col justify-center items-center cursor-default
+}
+
+.progressLabel{
+    @apply tracking-wide text-sm font-medium text-blue
+}
+
+.progressLabelUnderline{
+    @apply h-[1.5px] w-[80%] bg-blue
+}
+
+
+/* FORM SECTION */
+
+.formContainer{
+    @apply px-[4em] py-[3em]
+}
 
 .inputsContainer{
     @apply flex gap-[4em] tab:flex-col tab:gap-0
@@ -48,8 +50,20 @@
     @apply flex flex-col w-full mb-8 tab:mb-10
 }
 
+fieldset{
+    @apply rounded-md border-2 border-blue flex items-center w-full p-2 gap-2
+}
+
+.legend{
+    @apply ml-6 text-blue tracking-widest px-2 font-semibold
+}
+
 .inputField{
-    @apply border border-grayishBlue rounded-md h-[50px] outline-none pl-3 text-[#252b46]
+    @apply h-[30px] bg-transparent border-l-2 border-b-0 border-t-0 border-r-0 border-l-blue w-[90%] outline-none pl-2 placeholder:tracking-widest placeholder:text-gray-300
+}
+
+.icon{
+    @apply text-2xl text-blue
 }
 
 .inputLabel{
@@ -57,9 +71,23 @@
 }
 
 textarea{
-    @apply border border-grayishBlue rounded-md h-[150px] outline-none pl-3 text-[#252b46] mobile:h-[100px]
+    @apply w-full rounded-md h-[100px] outline-none pl-3 text-[#252b46] mobile:h-[100px]
 }
 
-.tabView{
-    @apply tab:hidden
+select{
+    @apply w-full  h-[30px] placeholder:tracking-widest placeholder:text-gray-300 outline-none
 }
+
+.btn{
+    @apply px-6 py-3 rounded-md tracking-widest cursor-pointer
+}
+
+
+
+
+
+
+
+
+
+

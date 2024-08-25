@@ -12,16 +12,20 @@ export default {
       // => @media (max-width: 430px) { ... }
     },
     fontFamily:{
-      body: ['Nunito Sans']
+      body: ["Roboto", 'sans-serif'
+        // ["Karantina", 'system-ui'] 
+      ]
     },
-    extend: {},
-    colors: {
-      softBlue: "#5368df",
-      softRed: "#fa5757",
-      grayishBlue: "#9194a1",
-      darkBlue: "#252b46",
-      white: "#ffff"
-    }
+    extend: {
+      colors: {
+        blue: "#1a4866",
+        customred: "#c60e20",
+        softBlue: "#5368df",
+        softRed: "#fa5757",
+        grayishBlue: "#9194a1",
+        darkBlue: "#252b46",
+      }
+    },
   },
   plugins: [],
 }

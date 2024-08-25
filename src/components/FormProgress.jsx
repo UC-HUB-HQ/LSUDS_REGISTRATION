@@ -1,20 +1,29 @@
-const FormProgress = ({stepOne}) => {
-    return (
-        <section className="grid grid-cols-4 items-center tab:justify-center tab:items-center tab:flex">
-            <div className="progressLineActive"></div>
-            <h2 className="hidden mobile:block font-bold pr-2">Steps: </h2>
-            <div className=" col-span-2 flexAlignCenter tab:gap-6">
-                <div className="flexAlignCenter">
-                    <span className="progressNumberingActive">1</span>
-                    <h1 className="progressLabelActive">Basic Information</h1>
-                </div>
-                <div className={ stepOne ? `progressLineDormant`: `progressLineActive` }></div>
-                <div className="flexAlignCenter mobile:w-full">
-                    <span className={stepOne ? `progressNumberingDormant` :`progressNumberingActive`}>2</span>
-                    <h1 className= {stepOne ? `progressLabelDormant`: `progressLabelActive` } >Interest Form</h1>
-                </div>
+const FormProgress = ({stepOne, confirmation}) => {
+
+    const DoubleArrow = () => {
+        return (
+            <div>
+                <i className="bi bi-chevron-double-right text-customred font-bold"></i>
             </div>
-            <div className={ stepOne ? `progressLineDormant tabView`: `progressLineActive `  }></div>
+        )
+    }
+
+    return (
+        <section className="flex items-center gap-8 w-[98%] mx-auto py-6 px-4 border-b-2 border-b-gray-100 ">
+            <div className="progressLabelContainer">
+                <h2 className="progressLabel">Basic Information</h2>
+                <span className={confirmation ? 'hidden' : stepOne ? 'block progressLabelUnderline' : 'hidden'}></span>
+            </div>
+            <DoubleArrow />
+            <div className="progressLabelContainer">
+                <h2 className="progressLabel">Interest Form</h2>
+                <span className={ confirmation || stepOne ? 'hidden' : 'block progressLabelUnderline' }></span>
+            </div>
+            <DoubleArrow />
+            <div className="progressLabelContainer">
+                <h2 className="progressLabel">Submit</h2>
+                <span className={ confirmation ? 'block progressLabelUnderline' : 'hidden' }></span>
+            </div>
         </section>
     )
 }
