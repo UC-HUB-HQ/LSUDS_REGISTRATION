@@ -11,13 +11,13 @@
 }
 
 .customShadow{
-    box-shadow: 0px 0px 30px rgb(213, 211, 211);
+    box-shadow: 0px 0px 20px rgb(213, 211, 211);
 }
 
 /* MAIN ELEMENT STYLE */
 
 .main_content{
-    @apply w-[60%] mx-auto rounded-lg
+    @apply w-[60%]  mx-auto rounded-lg tab:w-[80%] mobile:w-[95%]
 } 
 
 
@@ -27,8 +27,12 @@
     @apply flex flex-col justify-center items-center cursor-default
 }
 
+.mobileProgressLabel{
+    @apply text-sm font-medium text-blue w-full hidden  mobile:block
+}
+
 .progressLabel{
-    @apply tracking-wide text-sm font-medium text-blue
+    @apply tracking-wide text-sm font-medium text-blue mobile:hidden
 }
 
 .progressLabelUnderline{
@@ -39,7 +43,7 @@
 /* FORM SECTION */
 
 .formContainer{
-    @apply px-[4em] py-[3em]
+    @apply px-[4em] py-[3em] mobile:px-[1em]
 }
 
 .inputsContainer{
@@ -56,6 +60,14 @@ fieldset{
 
 .legend{
     @apply ml-6 text-blue tracking-widest px-2 font-semibold
+}
+
+.textareaLabel{
+    @apply hidden text-blue font-semibold mb-2 mobile:block
+}
+
+.textareaLegend{
+    @apply block mobile:hidden
 }
 
 .inputField{

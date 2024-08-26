@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef} from "react"
 import Validation from "./validation";
 const ApplicationInfoForm = ({nextStep}) => {
 
@@ -8,8 +8,11 @@ const ApplicationInfoForm = ({nextStep}) => {
             email: '',
             mobile: '',
             department: ''
-        });
-    const [errors, setErrors] = useState({})
+    });
+        
+    const errors = useRef(null)
+
+    const [isErrorPresent, setIsErrorPresent] = useState(false)
 
     
     const handleChange = (event) => {
@@ -17,28 +20,35 @@ const ApplicationInfoForm = ({nextStep}) => {
     }
 
     const handleValidation = () =>{
-        setErrors(Validation(userInfo))
-        const allInputFields = Object.values(userInfo).every((value) => value.trim() !== '');
+        // console.log('before', errors.current)
+        errors.current = Validation(userInfo)
+        const allInputFields = Object.values(errors.current).every(error => error === '');
 
+        // console.log('after', errors.current)
+        
         if(allInputFields){
-            console.log(allInputFields)
             nextStep()
+        }
+        else{
+            setIsErrorPresent(!isErrorPresent)
         }
     }
 
+    
     return (
         <>
             <div className="inputsContainer">
+                
                 <div className="inputBox">
-                    {errors?.firstName && <span className="text-xs text-customred">{errors?.firstName}</span>}
+                    {errors.current?.firstName && <span className="text-xs text-customred">{errors.current?.firstName}</span>}
                     <fieldset className="fieldset">
                         <legend className="legend">First Name</legend>
                         <i className="bi bi-person icon"></i>
-                        <input className={`inputField`} id="first_name" type="text" data-name="firstName" value={userInfo.firstName} onChange={handleChange} placeholder="Enter your first name" name="entry.1945534493" required />
+                        <input className={`inputField`} id="first_name" type="text" value={userInfo.firstName} data-name="firstName" onChange={handleChange} placeholder="Enter your first name" name="entry.1945534493" required />
                     </fieldset>
                 </div>
                 <div className="inputBox">
-                    {errors?.lastName && <span className="text-xs text-customred">{errors?.lastName}</span>}
+                    {errors.current?.lastName && <span className="text-xs text-customred">{errors.current?.lastName}</span>}
                     <fieldset className="fieldset">
                         <legend className="legend">Last Name</legend>
                         <i className="bi bi-person icon"></i>
@@ -48,7 +58,7 @@ const ApplicationInfoForm = ({nextStep}) => {
             </div>
             <div className="inputsContainer">
                 <div className="inputBox">
-                    {errors?.email && <span className="text-xs text-customred">{errors?.email}</span>}
+                    {errors.current?.email && <span className="text-xs text-customred">{errors.current?.email}</span>}
                     <fieldset className="fieldset">
                         <legend className="legend">Email</legend>
                         <i className="bi bi-envelope icon"></i>
@@ -56,7 +66,7 @@ const ApplicationInfoForm = ({nextStep}) => {
                     </fieldset>
                 </div>
                 <div className="inputBox">
-                    {errors?.mobile && <span className="text-xs text-customred">{errors?.mobile}</span>}
+                    {errors.current?.mobile && <span className="text-xs text-customred">{errors.current?.mobile}</span>}
                     <fieldset className="fieldset">
                         <legend className="legend">Mobile</legend>
                         <i className="bi bi-telephone icon"></i>
@@ -78,7 +88,7 @@ const ApplicationInfoForm = ({nextStep}) => {
                     </fieldset>
                 </div>
                 <div className="inputBox">
-                    {errors?.department && <span className="text-xs text-customred">{errors?.department}</span>}
+                    {errors.current?.department && <span className="text-xs text-customred">{errors.current?.department}</span>}
                     <fieldset className="fieldset">
                         <legend className="legend">Department</legend>
                         <i className="bi bi-diagram-3 icon"></i>

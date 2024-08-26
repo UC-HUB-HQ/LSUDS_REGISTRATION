@@ -4,9 +4,9 @@ const Header = () => {
         <>
             <header className="flex flex-col justify-center items-center mb-[4em]">
                 <div>
-                    <img className='w-[250px]' src={logo} alt="LSUDS LOGO" />
+                    <img className='w-[250px] mx-auto' src={logo} alt="LSUDS LOGO" />
                 </div>
-                <h1 className="text-2xl font-bold pt-1 text-blue tracking-[0.3em] mobile:text-xl">LSUDS APPLICATION</h1>
+                <h1 className="text-2xl font-bold pt-1 text-blue tracking-[0.3em] mobile:text-xl text-center">LSUDS APPLICATION</h1>
             </header>
         </>
     )

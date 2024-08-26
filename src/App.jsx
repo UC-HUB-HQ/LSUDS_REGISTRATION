@@ -29,13 +29,6 @@ function App() {
     window.scrollTo(0,0);
   }, [isStepOne, confirmation])
 
-
-
-  const resetApp = () => {
-    setIsStepOne(true)
-    setConfirmation(!confirmation)
-  }
-
  
   return (
     <div className="min-h-screen py-[4em] font-body">
@@ -55,7 +48,7 @@ function App() {
             </section>
           </form>
           <section className={ confirmation ? 'block' : 'hidden' }>
-            <Confirmation reset={resetApp} />
+            <Confirmation />
           </section>
         </section>
       </main>

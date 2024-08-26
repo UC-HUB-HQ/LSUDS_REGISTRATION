@@ -1,4 +1,8 @@
-const Confirmation = ({reset}) => {
+const Confirmation = () => {
+
+    const refresh = () => {
+        location.reload()
+    }
     return (
         <section className="flex flex-col items-center justify-center gap-6 text-center">
             <div className=" flex justify-center items-center w-[200px] aspect-square border border-blue rounded-full">
@@ -6,9 +10,9 @@ const Confirmation = ({reset}) => {
             </div>
             <div>
                 <h2 className="text-4xl font-bold text-blue">Submission Successful</h2>
-                <p className=" text-grayishBlue">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p className=" text-grayishBlue">Thanks for expressing interest in joining LSUDS.</p>
             </div>
-            <button className="px-4 py-3 text-white rounded-md bg-customred" onClick={reset}>Submit Another Response</button>
+            <button className="px-4 py-3 text-white rounded-md bg-customred" onClick={refresh}>Submit Another Response</button>
         </section>
     )
 }
