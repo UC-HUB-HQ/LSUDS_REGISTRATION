@@ -2,7 +2,7 @@ const LsudsInterestForm = ({prevStep, btnDisabled}) => {
     return (
         <>
             <div className="inputBox">
-                <label className="textareaLabel" htmlFor="question1">Why should you join the lsuds</label>
+                <label className="textareaLabel" htmlFor="question1">Why do you want to join LSUDS</label>
                 <fieldset className="fieldset">
                     <legend className="legend textareaLegend">Why should you join the lsuds</legend>
                     <textarea name="entry.1420042524" id="question1" required></textarea>
@@ -40,9 +40,9 @@ const LsudsInterestForm = ({prevStep, btnDisabled}) => {
                 <label className="textareaLabel" htmlFor="question5">If you make it to the next stage, how do you want to be interviewed: Physical or Virtual?</label>
                 <fieldset className="fieldset">
                     <legend className="legend textareaLegend"> If you make it to the next stage, how do you want to be interviewed: Physical or Virtual?</legend>
-                    <select defaultValue={'Yes'} name="entry.2061764711" id="question5">
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
+                    <select defaultValue={'Physical'} name="entry.2061764711" id="question5">
+                        <option value="Physical">Physical</option>
+                        <option value="Virtual">Virtual</option>
                     </select>
                 </fieldset>
             </div>
