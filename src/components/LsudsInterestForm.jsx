@@ -4,7 +4,7 @@ const LsudsInterestForm = ({prevStep, btnDisabled}) => {
             <div className="inputBox">
                 <label className="textareaLabel" htmlFor="question1">Why do you want to join LSUDS</label>
                 <fieldset className="fieldset">
-                    <legend className="legend textareaLegend">Why should you join the lsuds</legend>
+                    <legend className="legend textareaLegend">Why do you want to join LSUDS</legend>
                     <textarea name="entry.1420042524" id="question1" required></textarea>
                 </fieldset>
             </div>
