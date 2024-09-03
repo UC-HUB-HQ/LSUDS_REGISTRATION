@@ -4,12 +4,12 @@ export default function Validation(values){
 
     const email_patterns = /^[^\s@]+@[^\s@]+\.[^\s@]{2,6}$/;
 
-    if (values.firstName === ""){
-        errors.firstName = 'Surname is Required!';
+    if (values.surname === ""){
+        errors.surname = 'Surname is Required!';
     }
 
-    if (values.lastName === ""){
-        errors.lastName = 'Other Names is Required!'
+    if (values.otherNames === ""){
+        errors.otherNames = 'Other Names is Required!'
     }
 
     if (values.email === ""){
