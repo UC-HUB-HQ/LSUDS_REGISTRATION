@@ -15,13 +15,13 @@ const FormProgress = ({stepOne, confirmation}) => {
                 <h2 className=" mobileProgressLabel">Step 1</h2>
                 <span className={confirmation ? 'hidden' : stepOne ? 'block progressLabelUnderline' : 'hidden'}></span>
             </div>
-            <TrippleArrow />
+            <DoubleArrow />
             <div className="progressLabelContainer">
                 <h2 className="progressLabel">Interest Form</h2>
                 <h2 className="mobileProgressLabel">Step 2</h2>
                 <span className={ confirmation || stepOne ? 'hidden' : 'block progressLabelUnderline' }></span>
             </div>
-            <TrippleArrowArrow />
+            <DoubleArrow />
             <div className="progressLabelContainer">
                 <h2 className="progressLabel">Submit</h2>
                 <h2 className="mobileProgressLabel">Step 3</h2>
