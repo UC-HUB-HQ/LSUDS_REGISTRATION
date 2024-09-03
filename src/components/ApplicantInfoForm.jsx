@@ -1,58 +1,53 @@
-import { useState, useRef} from "react"
+import { useState, useRef } from "react";
 import Validation from "./validation";
-const ApplicationInfoForm = ({nextStep}) => {
+
+const ApplicationInfoForm = ({ nextStep }) => {
 
     const [userInfo, setUserInfo] = useState({
-            firstName: '',
-            lastName: '',
-            email: '',
-            mobile: '',
-            department: ''
+        surname: '',
+        otherNames: '',
+        email: '',
+        mobile: '',
+        department: ''
     });
-        
-    const errors = useRef(null)
 
-    const [isErrorPresent, setIsErrorPresent] = useState(false)
+    const errors = useRef(null);
 
-    
+    const [isErrorPresent, setIsErrorPresent] = useState(false);
+
     const handleChange = (event) => {
-        setUserInfo({...userInfo, [event.target.dataset.name]: event.target.value})
-    }
+        setUserInfo({ ...userInfo, [event.target.dataset.name]: event.target.value });
+    };
 
-    const handleValidation = () =>{
-        // console.log('before', errors.current)
-        errors.current = Validation(userInfo)
+    const handleValidation = () => {
+        errors.current = Validation(userInfo);
         const allInputFields = Object.values(errors.current).every(error => error === '');
 
-        // console.log('after', errors.current)
-        
-        if(allInputFields){
-            nextStep()
+        if (allInputFields) {
+            nextStep();
+        } else {
+            setIsErrorPresent(!isErrorPresent);
         }
-        else{
-            setIsErrorPresent(!isErrorPresent)
-        }
-    }
+    };
 
-    
     return (
         <>
             <div className="inputsContainer">
                 
                 <div className="inputBox">
-                    {errors.current?.firstName && <span className="text-xs text-customred">{errors.current?.firstName}</span>}
+                    {errors.current?.surname && <span className="text-xs text-customred">{errors.current?.surname}</span>}
                     <fieldset className="fieldset">
-                        <legend className="legend">First Name</legend>
+                        <legend className="legend">Surname</legend>
                         <i className="bi bi-person icon"></i>
-                        <input className={`inputField`} id="first_name" type="text" value={userInfo.firstName} data-name="firstName" onChange={handleChange} placeholder="Enter your first name" name="entry.1945534493" required />
+                        <input className={`inputField`} id="surname" type="text" value={userInfo.surname} data-name="surname" onChange={handleChange} placeholder="Enter your surname" name="entry.1945534493" required />
                     </fieldset>
                 </div>
                 <div className="inputBox">
-                    {errors.current?.lastName && <span className="text-xs text-customred">{errors.current?.lastName}</span>}
+                    {errors.current?.otherNames && <span className="text-xs text-customred">{errors.current?.otherNames}</span>}
                     <fieldset className="fieldset">
-                        <legend className="legend">Last Name</legend>
+                        <legend className="legend">Other Names</legend>
                         <i className="bi bi-person icon"></i>
-                        <input className="inputField" id="last_name" type="text" data-name="lastName" value={userInfo.lastName} onChange={handleChange} placeholder="Enter your last name" name="entry.1419225498" required />
+                        <input className="inputField" id="other_names" type="text" data-name="otherNames" value={userInfo.otherNames} onChange={handleChange} placeholder="Enter your other names" name="entry.1419225498" required />
                     </fieldset>
                 </div>
             </div>
@@ -62,15 +57,15 @@ const ApplicationInfoForm = ({nextStep}) => {
                     <fieldset className="fieldset">
                         <legend className="legend">Email</legend>
                         <i className="bi bi-envelope icon"></i>
-                        <input className="inputField" id="email" type="email" data-name="email" value={userInfo.email} onChange={handleChange} placeholder="Enter yout email address" name="entry.895389556" required />
+                        <input className="inputField" id="email" type="email" data-name="email" value={userInfo.email} onChange={handleChange} placeholder="Enter your email address" name="entry.895389556" required />
                     </fieldset>
                 </div>
                 <div className="inputBox">
                     {errors.current?.mobile && <span className="text-xs text-customred">{errors.current?.mobile}</span>}
                     <fieldset className="fieldset">
-                        <legend className="legend">Mobile</legend>
+                        <legend className="legend">Mobile Number</legend>
                         <i className="bi bi-telephone icon"></i>
-                        <input className="inputField" type="tel" id="mobile_number" data-name="mobile" value={userInfo.mobile} onChange={handleChange}  placeholder="Enter your mobile number" name="entry.2013455807" required pattern="^(\+)?[0-9]+$"/>
+                        <input className="inputField" type="tel" id="mobile_number" data-name="mobile" value={userInfo.mobile} onChange={handleChange} placeholder="Enter your mobile number" name="entry.2013455807" required pattern="^(\+)?[0-9]+$" />
                     </fieldset>
                 </div>
             </div>
@@ -92,7 +87,7 @@ const ApplicationInfoForm = ({nextStep}) => {
                     <fieldset className="fieldset">
                         <legend className="legend">Department</legend>
                         <i className="bi bi-diagram-3 icon"></i>
-                        <input className="inputField" id="department" type="text" data-name="department" value={userInfo.department} onChange={handleChange} placeholder="Enter department" name="entry.1801548548" required/>
+                        <input className="inputField" id="department" type="text" data-name="department" value={userInfo.department} onChange={handleChange} placeholder="Enter department" name="entry.1801548548" required />
                     </fieldset>
                 </div>
             </div>
@@ -100,8 +95,7 @@ const ApplicationInfoForm = ({nextStep}) => {
                 <button className="text-white border-none bg-customred btn" type="button" onClick={handleValidation}>Next</button>
             </div>
         </>
-    )
-}
+    );
+};
 
-
-export default ApplicationInfoForm
+export default ApplicationInfoForm;

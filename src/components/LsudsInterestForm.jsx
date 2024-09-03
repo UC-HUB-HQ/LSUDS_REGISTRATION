@@ -2,53 +2,38 @@ const LsudsInterestForm = ({prevStep, btnDisabled}) => {
     return (
         <>
             <div className="inputBox">
-                <label className="textareaLabel" htmlFor="question1">Why do you want to join LSUDS</label>
+                <label className="textareaLabel" htmlFor="question1">Why do you want to join the LASU Debate Society?</label>
                 <fieldset className="fieldset">
-                    <legend className="legend textareaLegend">Why do you want to join LSUDS</legend>
+                    <legend className="legend textareaLegend">Why do you want to join the LASU Debate Society?</legend>
                     <textarea name="entry.1420042524" id="question1" required></textarea>
                 </fieldset>
             </div>
 
             <div className="inputBox">
-                <label className="textareaLabel" htmlFor="question2">Why should you be selected to the next stage?</label>
+                <label className="textareaLabel" htmlFor="question2">What distinguishes you as an applicant worthy of progressing to the next stage?</label>
                 <fieldset className="fieldset">
-                    <legend className="legend textareaLegend">Why should you be selected to the next stage?</legend>
+                    <legend className="legend textareaLegend">What distinguishes you as an applicant worthy of progressing to the next stage?</legend>
                     <textarea name="entry.916034787" id="question2" required></textarea>
                 </fieldset>
             </div>
 
             <div className="inputBox">
-                <label className="textareaLabel" htmlFor="question3">What do you hope to gain when you join?</label>
+                <label className="textareaLabel" htmlFor="question3">In what ways do you plan to contribute to the LASU Debate Society if you become a member?</label>
                 <fieldset className="fieldset">
-                    <legend className="legend textareaLegend">What do you hope to gain when you join?</legend>
+                    <legend className="legend textareaLegend">In what ways do you plan to contribute to the LASU Debate Society if you become a member?</legend>
                     <textarea name="entry.54895519" id="question3"></textarea>
                 </fieldset>
             </div>
 
             <div className="inputBox">
-                <label className="textareaLabel" htmlFor="question4">Can you dedicate 2 hours every Friday to learning the art of public speaking?</label>
+                <label className="textareaLabel" htmlFor="question4">Are you willing to commit two hours every Friday to developing your skills in public speaking?</label>
                 <fieldset className="fieldset ">
-                    <legend className="legend textareaLegend">Can you dedicate 2 hours every Friday to learning the art of public speaking?</legend>
+                    <legend className="legend textareaLegend">Are you willing to commit two hours every Friday to developing your skills in public speaking?</legend>
                     <select defaultValue={'Yes'} name="entry.1423883032" id="question4">
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                     </select>
                 </fieldset>
-            </div>
-
-            <div className="inputBox">
-                <label className="textareaLabel" htmlFor="question5">If you make it to the next stage, how do you want to be interviewed: Physical or Virtual?</label>
-                <fieldset className="fieldset">
-                    <legend className="legend textareaLegend"> If you make it to the next stage, how do you want to be interviewed: Physical or Virtual?</legend>
-                    <select defaultValue={'Physical'} name="entry.2061764711" id="question5">
-                        <option value="Physical">Physical</option>
-                        <option value="Virtual">Virtual</option>
-                    </select>
-                </fieldset>
-            </div>
-
-            <div className=" text-grayishBlue">
-                <p><b className="text-darkBlue">Note:</b> Online interviews are only advised in extreme scenrios where the interviewee is sure they cannot make it to the physical venue.</p>
             </div>
             
             <div className="flex items-center justify-between mt-8">
