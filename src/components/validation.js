@@ -4,19 +4,19 @@ export default function Validation(values){
 
     const email_patterns = /^[^\s@]+@[^\s@]+\.[^\s@]{2,6}$/;
 
-    if (values.firstName === ""){
-        errors.firstName = 'First Name is Required!';
+    if (values.surname === ""){
+        errors.surname = 'Surname is Required!';
     }
 
-    if (values.lastName === ""){
-        errors.lastName = 'Last Name is Required!'
+    if (values.otherNames === ""){
+        errors.otherNames = 'Other Names is Required!'
     }
 
     if (values.email === ""){
         errors.email = 'Email is Required!'
     }
     else if (!email_patterns.test(values.email)){
-        errors.email = 'Email is not valid';
+        errors.email = 'Invalid Email entered';
     }
 
     if (values.department === ""){
@@ -24,7 +24,7 @@ export default function Validation(values){
     }
 
     if (values.mobile === ""){
-        errors.mobile = 'Mobile is Required!'
+        errors.mobile = 'Mobile No is Required!'
     }
 
     return errors
