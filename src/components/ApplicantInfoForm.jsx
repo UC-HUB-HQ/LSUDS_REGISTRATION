@@ -20,11 +20,9 @@ const ApplicationInfoForm = ({nextStep}) => {
     }
 
     const handleValidation = () =>{
-        // console.log('before', errors.current)
         errors.current = Validation(userInfo)
         const allInputFields = Object.values(errors.current).every(error => error === '');
 
-        // console.log('after', errors.current)
         
         if(allInputFields){
             nextStep()
