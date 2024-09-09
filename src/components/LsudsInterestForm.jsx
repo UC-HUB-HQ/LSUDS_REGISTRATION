@@ -21,7 +21,7 @@ const LsudsInterestForm = ({prevStep, btnDisabled}) => {
                 <label className="textareaLabel" htmlFor="question3">In what ways do you plan to contribute to the LASU Debate Society if you become a member?</label>
                 <fieldset className="fieldset">
                     <legend className="legend textareaLegend">In what ways do you plan to contribute to the LASU Debate Society if you become a member?</legend>
-                    <textarea name="entry.54895519" id="question3"></textarea>
+                    <textarea name="entry.54895519" id="question3" required></textarea>
                 </fieldset>
             </div>
 
