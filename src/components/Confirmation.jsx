@@ -9,7 +9,6 @@ const Confirmation = () => {
                 <h2 className="text-4xl font-bold text-blue">Submission Successful</h2>
                 <p className=" text-grayishBlue">Thank you for expressing your interest in joining the LASU Debate Society. Your application has been successfully submitted. Please check your email for a confirmation message, and ensure to review your spam or junk folder if it does not appear in your inbox. We appreciate your enthusiasm and look forward to thoroughly reviewing your application.</p>
             </div>
-            <button className="px-4 py-3 text-white rounded-md bg-customred"><a href="https://www.theuchub.com/">Application created by UCHUB</a></button>
         </section>
     )
 }
