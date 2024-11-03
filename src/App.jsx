@@ -52,6 +52,9 @@ function App() {
           </section>
         </section>
       </main>
+      <footer className=" text-center mt-10">
+        <p className="font-bold">Powered by <a className=" text-softBlue underline" href="https://www.theuchub.com/">UCHUB</a></p>
+      </footer>
     </div>
   )
 }
