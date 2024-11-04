@@ -5,7 +5,7 @@ const LsudsInterestForm = ({prevStep, btnDisabled}) => {
                 <label className="textareaLabel" htmlFor="question1">Why do you want to join the LASU Debate Society?</label>
                 <fieldset className="fieldset">
                     <legend className="legend textareaLegend">Why do you want to join the LASU Debate Society?</legend>
-                    <textarea name="entry.1420042524" id="question1" required></textarea>
+                    <textarea name="entry.459583861" id="question1" required></textarea>
                 </fieldset>
             </div>
 
@@ -13,7 +13,7 @@ const LsudsInterestForm = ({prevStep, btnDisabled}) => {
                 <label className="textareaLabel" htmlFor="question2">What distinguishes you as an applicant worthy of progressing to the next stage?</label>
                 <fieldset className="fieldset">
                     <legend className="legend textareaLegend">What distinguishes you as an applicant worthy of progressing to the next stage?</legend>
-                    <textarea name="entry.916034787" id="question2" required></textarea>
+                    <textarea name="entry.1789378395" id="question2" required></textarea>
                 </fieldset>
             </div>
 
@@ -21,7 +21,7 @@ const LsudsInterestForm = ({prevStep, btnDisabled}) => {
                 <label className="textareaLabel" htmlFor="question3">In what ways do you plan to contribute to the LASU Debate Society if you become a member?</label>
                 <fieldset className="fieldset">
                     <legend className="legend textareaLegend">In what ways do you plan to contribute to the LASU Debate Society if you become a member?</legend>
-                    <textarea name="entry.54895519" id="question3" required></textarea>
+                    <textarea name="entry.2050489767" id="question3" required></textarea>
                 </fieldset>
             </div>
 
@@ -29,7 +29,7 @@ const LsudsInterestForm = ({prevStep, btnDisabled}) => {
                 <label className="textareaLabel" htmlFor="question4">Are you willing to commit two hours every Friday to developing your skills in public speaking?</label>
                 <fieldset className="fieldset ">
                     <legend className="legend textareaLegend">Are you willing to commit two hours every Friday to developing your skills in public speaking?</legend>
-                    <select defaultValue={'Yes'} name="entry.1423883032" id="question4">
+                    <select defaultValue={'Yes'} name="entry.845859975" id="question4">
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                     </select>

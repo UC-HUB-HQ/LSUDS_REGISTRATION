@@ -39,7 +39,7 @@ const ApplicationInfoForm = ({ nextStep }) => {
                     <fieldset className="fieldset">
                         <legend className="legend">Surname</legend>
                         <i className="bi bi-person icon"></i>
-                        <input className={`inputField`} id="surname" type="text" value={userInfo.surname} data-name="surname" onChange={handleChange} placeholder="Enter your surname" name="entry.1945534493" required />
+                        <input className={`inputField`} id="surname" type="text" value={userInfo.surname} data-name="surname" onChange={handleChange} placeholder="Enter your surname" name="entry.244786694" required />
                     </fieldset>
                 </div>
                 <div className="inputBox">
@@ -47,7 +47,7 @@ const ApplicationInfoForm = ({ nextStep }) => {
                     <fieldset className="fieldset">
                         <legend className="legend">Other Names</legend>
                         <i className="bi bi-person icon"></i>
-                        <input className="inputField" id="other_names" type="text" data-name="otherNames" value={userInfo.otherNames} onChange={handleChange} placeholder="Enter your other names" name="entry.1419225498" required />
+                        <input className="inputField" id="other_names" type="text" data-name="otherNames" value={userInfo.otherNames} onChange={handleChange} placeholder="Enter your other names" name="entry.11177549" required />
                     </fieldset>
                 </div>
             </div>
@@ -57,7 +57,7 @@ const ApplicationInfoForm = ({ nextStep }) => {
                     <fieldset className="fieldset">
                         <legend className="legend">Email</legend>
                         <i className="bi bi-envelope icon"></i>
-                        <input className="inputField" id="email" type="email" data-name="email" value={userInfo.email} onChange={handleChange} placeholder="Enter your email address" name="entry.895389556" required />
+                        <input className="inputField" id="email" type="email" data-name="email" value={userInfo.email} onChange={handleChange} placeholder="Enter your email address" name="entry.2137853488" required />
                     </fieldset>
                 </div>
                 <div className="inputBox">
@@ -65,7 +65,7 @@ const ApplicationInfoForm = ({ nextStep }) => {
                     <fieldset className="fieldset">
                         <legend className="legend">Mobile Number</legend>
                         <i className="bi bi-telephone icon"></i>
-                        <input className="inputField" type="tel" id="mobile_number" data-name="mobile" value={userInfo.mobile} onChange={handleChange} placeholder="Enter your mobile number" name="entry.2013455807" required pattern="^(\+)?[0-9]+$" />
+                        <input className="inputField" type="tel" id="mobile_number" data-name="mobile" value={userInfo.mobile} onChange={handleChange} placeholder="Enter your mobile number" name="entry.2078166964" required pattern="^(\+)?[0-9]+$" />
                     </fieldset>
                 </div>
             </div>
@@ -73,7 +73,7 @@ const ApplicationInfoForm = ({ nextStep }) => {
                 <div className="inputBox">
                     <fieldset className="fieldset">
                         <legend className="legend">Level</legend>
-                        <select defaultValue={100} name="entry.283386231" id="level">
+                        <select defaultValue={100} name="entry.2017945221" id="level">
                             <option value="100">100</option>
                             <option value="200">200</option>
                             <option value="300">300</option>
@@ -87,7 +87,7 @@ const ApplicationInfoForm = ({ nextStep }) => {
                     <fieldset className="fieldset">
                         <legend className="legend">Department</legend>
                         <i className="bi bi-diagram-3 icon"></i>
-                        <input className="inputField" id="department" type="text" data-name="department" value={userInfo.department} onChange={handleChange} placeholder="Enter department" name="entry.1801548548" required />
+                        <input className="inputField" id="department" type="text" data-name="department" value={userInfo.department} onChange={handleChange} placeholder="Enter department" name="entry.621575232" required />
                     </fieldset>
                 </div>
             </div>
