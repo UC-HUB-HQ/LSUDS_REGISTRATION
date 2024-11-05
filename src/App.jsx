@@ -39,7 +39,7 @@ function App() {
         </section>
         <section className="formContainer"> 
           <iframe className="hidden" id="form_confirmation" name="form_confirmation" onLoad={iframeOnLoad}></iframe>
-          <form target="form_confirmation" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSeoWeLs9we0TNrOZEZYzxaBAjYbZHm2jMfoWjsvB7qfWZTj5g/formResponse" onSubmit={ () => setSubmitted(!submitted)}>
+          <form target="form_confirmation" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSeOL_6bczRQtLdhcgdpbT2VVzStH8H9aoSGuAffvX3F7YCD0A/formResponse" onSubmit={ () => setSubmitted(!submitted)}>
             <section className={ confirmation ? 'hidden' : isStepOne ? 'block' : 'hidden'}>
               <ApplicantInfoForm nextStep={changeFormStep} />
             </section>
