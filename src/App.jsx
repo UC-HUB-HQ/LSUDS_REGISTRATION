@@ -16,6 +16,18 @@ function App() {
   // Keeps track of form submmission
   const [submitted, setSubmitted] = useState(false);
 
+
+  const submitForm = () => {
+    const prevSubmission = localStorage.getItem("LSUDS")
+    if (prevSubmission){
+      alert("Looks like you’ve already made your case! You’ve submitted your application, and we’re reviewing it with the scrutiny of a debate champion. Stay tuned for the results — no need to debate this one twice!")
+    }
+    else{
+      setSubmitted(!submitted)
+      localStorage.setItem("LSUDS", true)
+    }
+  }
+
   // Displays the confirmation component to user after submitting the form
   const iframeOnLoad = () => {
       if(submitted == true){
@@ -39,7 +51,7 @@ function App() {
         </section>
         <section className="formContainer"> 
           <iframe className="hidden" id="form_confirmation" name="form_confirmation" onLoad={iframeOnLoad}></iframe>
-          <form target="form_confirmation" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSeOL_6bczRQtLdhcgdpbT2VVzStH8H9aoSGuAffvX3F7YCD0A/formResponse" onSubmit={ () => setSubmitted(!submitted)}>
+          <form target="form_confirmation" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSeOL_6bczRQtLdhcgdpbT2VVzStH8H9aoSGuAffvX3F7YCD0A/formResponse" onSubmit={submitForm}>
             <section className={ confirmation ? 'hidden' : isStepOne ? 'block' : 'hidden'}>
               <ApplicantInfoForm nextStep={changeFormStep} />
             </section>
