@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useEffect } from "react";
 import Validation from "./validation";
 
 const ApplicationInfoForm = ({ nextStep }) => {
@@ -11,31 +11,37 @@ const ApplicationInfoForm = ({ nextStep }) => {
         department: ''
     });
 
-    const errors = useRef(null);
+    const [errors, setErrors] = useState(null);
 
-    const [isErrorPresent, setIsErrorPresent] = useState(false);
+    const [validationPassed, setValidationPassed] = useState(false);
 
     const handleChange = (event) => {
         setUserInfo({ ...userInfo, [event.target.dataset.name]: event.target.value });
     };
 
     const handleValidation = () => {
-        errors.current = Validation(userInfo);
-        const allInputFields = Object.values(errors.current).every(error => error === '');
-
-        if (allInputFields) {
-            nextStep();
-        } else {
-            setIsErrorPresent(!isErrorPresent);
-        }
+        setErrors( errors => {
+            const newError = Validation(userInfo)
+            if (Object.values(newError).length === 0) {
+                setValidationPassed(true); 
+            }
+            return newError
+        });
     };
+
+    useEffect(() => {
+        if (validationPassed) {
+            nextStep();
+            setValidationPassed(false); 
+        }
+    }, [validationPassed]); 
 
     return (
         <>
             <div className="inputsContainer">
                 
                 <div className="inputBox">
-                    {errors.current?.surname && <span className="text-xs text-customred">{errors.current?.surname}</span>}
+                    {errors?.surname && <span className="text-xs text-customred">{errors?.surname}</span>}
                     <fieldset className="fieldset">
                         <legend className="legend">Surname</legend>
                         <i className="bi bi-person icon"></i>
@@ -43,7 +49,7 @@ const ApplicationInfoForm = ({ nextStep }) => {
                     </fieldset>
                 </div>
                 <div className="inputBox">
-                    {errors.current?.otherNames && <span className="text-xs text-customred">{errors.current?.otherNames}</span>}
+                    {errors?.otherNames && <span className="text-xs text-customred">{errors?.otherNames}</span>}
                     <fieldset className="fieldset">
                         <legend className="legend">Other Names</legend>
                         <i className="bi bi-person icon"></i>
@@ -53,7 +59,7 @@ const ApplicationInfoForm = ({ nextStep }) => {
             </div>
             <div className="inputsContainer">
                 <div className="inputBox">
-                    {errors.current?.email && <span className="text-xs text-customred">{errors.current?.email}</span>}
+                    {errors?.email && <span className="text-xs text-customred">{errors?.email}</span>}
                     <fieldset className="fieldset">
                         <legend className="legend">Email</legend>
                         <i className="bi bi-envelope icon"></i>
@@ -61,7 +67,7 @@ const ApplicationInfoForm = ({ nextStep }) => {
                     </fieldset>
                 </div>
                 <div className="inputBox">
-                    {errors.current?.mobile && <span className="text-xs text-customred">{errors.current?.mobile}</span>}
+                    {errors?.mobile && <span className="text-xs text-customred">{errors?.mobile}</span>}
                     <fieldset className="fieldset">
                         <legend className="legend">Mobile Number</legend>
                         <i className="bi bi-telephone icon"></i>
@@ -83,7 +89,7 @@ const ApplicationInfoForm = ({ nextStep }) => {
                     </fieldset>
                 </div>
                 <div className="inputBox">
-                    {errors.current?.department && <span className="text-xs text-customred">{errors.current?.department}</span>}
+                    {errors?.department && <span className="text-xs text-customred">{errors?.department}</span>}
                     <fieldset className="fieldset">
                         <legend className="legend">Department</legend>
                         <i className="bi bi-diagram-3 icon"></i>

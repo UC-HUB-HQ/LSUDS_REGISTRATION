@@ -58,6 +58,10 @@ fieldset{
     @apply rounded-md border-2 border-blue flex items-center w-full p-2 gap-2
 }
 
+.textareaFieldSet{
+    @apply gap-1 flex-col items-end
+}
+
 .legend{
     @apply ml-6 text-blue tracking-widest px-2 font-semibold
 }
@@ -83,7 +87,7 @@ fieldset{
 }
 
 textarea{
-    @apply w-full rounded-md h-[100px] outline-none pl-3 text-[#252b46] mobile:h-[100px]
+    @apply w-full rounded-md h-[100px] outline-none pl-3  text-[#252b46] mobile:h-[100px]
 }
 
 select{
