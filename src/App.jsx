@@ -21,6 +21,7 @@ function App() {
     const prevSubmission = localStorage.getItem("LSUDS")
     if (prevSubmission){
       alert("Looks like you’ve already made your case! You’ve submitted your application, and we’re reviewing it with the scrutiny of a debate champion. Stay tuned for the results — no need to debate this one twice!")
+      location.reload()
     }
     else{
       setSubmitted(!submitted)
