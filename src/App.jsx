@@ -16,8 +16,6 @@ function App() {
   // Keeps track of form submmission
   const [submitted, setSubmitted] = useState(false);
 
-  console.log(submitted)
-
 
   const submitForm = (e) => {
     e.preventDefault();
