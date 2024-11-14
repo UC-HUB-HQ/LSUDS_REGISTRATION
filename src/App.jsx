@@ -16,16 +16,22 @@ function App() {
   // Keeps track of form submmission
   const [submitted, setSubmitted] = useState(false);
 
+  console.log(submitted)
 
-  const submitForm = () => {
+
+  const submitForm = (e) => {
+    e.preventDefault();
+
     const prevSubmission = localStorage.getItem("LSUDS")
+
     if (prevSubmission){
       alert("Looks like you’ve already made your case! You’ve submitted your application, and we’re reviewing it with the scrutiny of a debate champion. Stay tuned for the results — no need to debate this one twice!")
-      location.reload()
+      location.reload();
     }
     else{
-      setSubmitted(!submitted)
-      localStorage.setItem("LSUDS", true)
+      e.target.submit();
+      setSubmitted(true);
+      localStorage.setItem("LSUDS", true);
     }
   }
 
@@ -33,11 +39,10 @@ function App() {
   const iframeOnLoad = () => {
       if(submitted == true){
         setConfirmation(!confirmation)
-        setSubmitted(false)
     }
   }
   
-  // Ensures we are at the top of the page whenevert we move to a new component
+  // Ensures we are at the top of the page whenever we move to a new component
   useEffect( () => {
     window.scrollTo(0,0);
   }, [isStepOne, confirmation])
